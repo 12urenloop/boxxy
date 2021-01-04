@@ -169,4 +169,20 @@ displayed scores. This can be done using:
         -u 'count-von-count:tetten' \
         -d '{"frozen": true}'
 
+Examples
+--------
+Updating the state with the `teams` field updated
+
+    curl -XPUT localhost:8080/state \
+        -H 'Content-Type: application/json' \
+        -u 'count-von-count:tetten' \
+        -d '{"teams":{"0":{"id":0, "name":"VTK", "laps":10, "updated":"2019-10-03T19:00:00:03"}}}'
+
+Updating the number of laps for a certain team
+
+    curl -XPUT localhost:8080/lap \
+        -H 'Content-Type: application/json' \
+        -u 'count-von-count:tetten' \
+        -d '{"team":0, "total":10, "timestamp":"2019-10-03T19:00:00:03"}'
+
 Unfreezing can be done by setting the same parameter to `false`.
