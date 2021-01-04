@@ -158,7 +158,7 @@ Freezing and setting notifications
 
     curl -XPUT localhost:8080/state \
         -H 'Content-Type: application/json' \
-        -u 'count-von-count:tetten' \
+        -u 'count-von-count:zeusisawesome' \
         -d '{"notification": "This is a message"}'
 
 At some point close to the end of the competition, we may want to freeze the
@@ -166,7 +166,7 @@ displayed scores. This can be done using:
 
     curl -XPUT localhost:8080/state \
         -H 'Content-Type: application/json' \
-        -u 'count-von-count:tetten' \
+        -u 'count-von-count:zeusisawesome' \
         -d '{"frozen": true}'
 
 Examples
@@ -175,14 +175,14 @@ Updating the state with the `teams` field updated
 
     curl -XPUT localhost:8080/state \
         -H 'Content-Type: application/json' \
-        -u 'count-von-count:tetten' \
+        -u 'count-von-count:zeusisawesome' \
         -d '{"teams":{"0":{"id":0, "name":"VTK", "laps":10, "updated":"2019-10-03T19:00:00:03"}}}'
 
 Updating the number of laps for a certain team
 
     curl -XPUT localhost:8080/lap \
         -H 'Content-Type: application/json' \
-        -u 'count-von-count:tetten' \
+        -u 'count-von-count:zeusisawesome' \
         -d '{"team":0, "total":10, "timestamp":"2019-10-03T19:00:00:03"}'
 
 Unfreezing can be done by setting the same parameter to `false`.
